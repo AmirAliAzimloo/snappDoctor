@@ -4,6 +4,7 @@ import './globals.css'
 import Header from './components/header/Header'
 import Sidebar from './components/sidebar/Sidebar'
 import SplashScreenProvider from "@/app/providers/splash-screen-provider"
+import Footer from './components/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,12 +26,16 @@ export default function RootLayout({
     <div className='container' >
       <Header /> 
 
-      <div className=' w-screen flex items-center justify-center' >
+      <div className=' w-screen flex items-center justify-center ' >
       <Sidebar />
       {children}
+      <Footer />
       </div>
-      
+
+
       </div>
+
+
 
     </SplashScreenProvider>
      

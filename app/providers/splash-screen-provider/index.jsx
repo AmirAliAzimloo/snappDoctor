@@ -9,6 +9,7 @@ const SplashScreenProvider = ({children}) => {
    const isHome=pathname==="/";
 
    const [isLoading,setisLoading]=useState(true);
+   
    setTimeout(()=>{setisLoading(false)},2500);
 
 

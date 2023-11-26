@@ -16,7 +16,7 @@ const Header = () => {
     <div className="w-screen sticky bg-gray-200 py-4 flex items-center justify-between px-4">
       {/* <HiOutlineShoppingCart size={"26"} className=" text-gray-700" /> */}
       <div className="hidden md:block text-gray-600 font-serif font-bold" >
-        Created by Amir Ali Azimloo
+        Store App
       </div>
       <div className="md:hidden text-gray-600 font-serif font-bold">
         <IoMdRose size={"26"}/>
