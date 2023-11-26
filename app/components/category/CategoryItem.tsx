@@ -2,19 +2,19 @@ import { HiArrowSmRight } from "react-icons/hi";
 
 interface CategoryItemProps{
     name:string;
-    id:string;
 }
 
-const CategoryItem:React.FC<CategoryItemProps> = ({name,id}) => {
+const CategoryItem:React.FC<CategoryItemProps> = ({name}) => {
     return ( 
         <div className="flex flex-col" >
 
         <div className="
         py-2 
         w-full 
+        px-12
         flex 
         items-center 
-        justify-center 
+        justify-between 
         text-gray-600 
         border-b-2 
         border-gray-200
@@ -28,9 +28,7 @@ const CategoryItem:React.FC<CategoryItemProps> = ({name,id}) => {
         transition-all
         duration-300
         ">
-            <div>
-                Category Item
-            </div>
+            {name}
             <HiArrowSmRight />
         </div>
         </div>

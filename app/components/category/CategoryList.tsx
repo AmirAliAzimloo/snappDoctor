@@ -2,13 +2,13 @@ import { Category } from "@/app/types";
 import CategoryItem from "./CategoryItem";
 
 interface CategoryListProps{
-    categorys:Category[]
+    categories:string[]
 }
 
-const CategoryList:React.FC<CategoryListProps> = ({categorys}) => {
+const CategoryList:React.FC<CategoryListProps> = ({categories}) => {
         return ( 
-                categorys.map(category=>
-                <CategoryItem key={category.id} name={category.name} id={category.id} />
+                categories?.map((category,index)=>
+                <CategoryItem key={index} name={category} />
                 )
          );
     }

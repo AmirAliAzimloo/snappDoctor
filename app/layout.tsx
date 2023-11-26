@@ -22,11 +22,10 @@ export default function RootLayout({
     <html lang="en">
     <body className={`${inter.className}`}>
     <SplashScreenProvider>
-
     <div className='container' >
       <Header /> 
 
-      <div className=' w-screen flex items-center justify-center ' >
+      <div className=' w-screen flex  justify-center ' >
       <Sidebar />
       {children}
       <Footer />
@@ -34,6 +33,7 @@ export default function RootLayout({
 
 
       </div>
+
 
 
 

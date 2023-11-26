@@ -1,6 +1,14 @@
+import axios from "axios";
 import CategoryList from "../category/CategoryList";
 
-const Sidebar = () => {
+const getData =async (url:string) => {
+  const data = await axios.get(url)
+  return data.data
+}
+
+const Sidebar = async () => {
+  const categories = await getData("https://fakestoreapi.com/products/categories")
+
   return (
     <div
       className=" 
@@ -19,39 +27,7 @@ const Sidebar = () => {
         "
     >
       <CategoryList
-        categorys={[
-          { id: "1", name: "a" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-          { id: "2", name: "b" },
-        ]}
+        categories={[...categories]}
       />
     </div>
   );
