@@ -1,14 +1,98 @@
+import SideBarItem from '../components/Sidebar/SideBarItem'
 import Sidebar from '../components/Sidebar/Sidebar'
 
 export default function Home() {
   return (
-   <div
+    <div className='w-full px-8' >
+  <div
    className='
    w-full
-   bg-red-700
+   pl-28
+   sm:pl-52
+   md:pl-64
+   lg:pl-80
    '
    >
-   home
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
+   <div>a</div>
    </div>
+    </div>
+ 
   )
 }

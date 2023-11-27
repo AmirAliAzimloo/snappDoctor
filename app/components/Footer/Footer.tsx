@@ -2,7 +2,7 @@ import FooterLinks from './FooterLinks'
 
 export default function Footer() {
   return (
-   <footer className='  w-full border-t-2 border-gray-200 flex flex-col justify-center items-center px-4 pt-8  ' >
+   <footer className=' sticky bottom-0 w-full border-t-2 bg-gray-100 border-gray-200 flex flex-col justify-center items-center pt-8  ' >
 
     <FooterLinks />
   

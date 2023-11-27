@@ -6,10 +6,10 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex w-full ">
+    <main className="flex mt-[70px]">
       <Sidebar />
 
       {children}
-    </div>
+    </main>
   );
 }

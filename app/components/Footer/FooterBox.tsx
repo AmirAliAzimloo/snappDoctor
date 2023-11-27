@@ -2,7 +2,7 @@ export default function FooterBox() {
   return (
     <div className="w-full text-center flex flex-col">
 
-        <div className=" px-4 text-start " >
+        <div className=" px-8 text-start " >
 
         <span
         className="
