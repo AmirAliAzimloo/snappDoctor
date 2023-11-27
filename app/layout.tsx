@@ -1,10 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from './components/header/Header'
-import Sidebar from './components/sidebar/Sidebar'
-import SplashScreenProvider from "@/app/providers/splash-screen-provider"
-import Footer from './components/Footer/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,26 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-    <body className={`${inter.className}`}>
-    <SplashScreenProvider>
-    <div className='container' >
-      <Header /> 
-
-      <div className=' w-screen flex  justify-center ' >
-      <Sidebar />
-      {children}
-      <Footer />
-      </div>
-
-
-      </div>
-
-
-
-
-    </SplashScreenProvider>
-     
-    </body>
-  </html>
+      <body className={inter.className}>{children}</body>
+    </html>
   )
 }
