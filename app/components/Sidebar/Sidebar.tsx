@@ -2,24 +2,24 @@
 
 import useSWR from "swr";
 import SideBarItem from "./SideBarItem";
+import Loader from "../Loader/Loader";
+import Error from "@/app/error"
 
 export default function Sidebar() {
-
-    // const fetcher = async (url: string) => {
-    //     const response = await fetch(url);
-    //     const data = await response.json();
-    //     return data;
-    //   };
 
       const { data, error } = useSWR(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products/categories`);
 
 
       if (error) {
-        return <div>Error fetching data</div>;
+        return (
+            <Error/>
+        );
       }
 
       if (!data) {
-        return <div>Loading...</div>;
+        return (
+        <Loader/>
+        );
       }
 
 

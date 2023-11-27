@@ -1,10 +1,9 @@
-import SideBarItem from '../components/Sidebar/SideBarItem'
-import Sidebar from '../components/Sidebar/Sidebar'
+import ProductList from './components/Products/ProductList'
 
 export default function Home() {
   return (
     <div className='w-full px-8' >
-  <div
+    <div
    className='
    w-full
    pl-28
@@ -13,85 +12,8 @@ export default function Home() {
    lg:pl-80
    '
    >
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   <div>a</div>
-   </div>
+   <ProductList/>
+    </div>
     </div>
  
   )
