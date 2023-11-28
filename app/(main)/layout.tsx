@@ -6,7 +6,7 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="flex mt-[70px]">
+    <main className="flex mt-[68px]">
       <Sidebar />
 
       {children}

@@ -14,6 +14,7 @@ const SideBarItem:React.FC<SideBarItemProps> =({category}) =>{
     
     flex
     items-center
+    justify-between
     pl-1
     sm:pl-8
     space-x-4
@@ -38,7 +39,7 @@ const SideBarItem:React.FC<SideBarItemProps> =({category}) =>{
        {category}
       </span>
 
-      <div className=" block  ">
+      <div className=" block  pr-8 ">
         <HiArrowSmRight />
       </div>
     </div>

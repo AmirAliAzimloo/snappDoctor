@@ -1,36 +1,24 @@
-"use client"
+"use client";
 
 import useSWR from "swr";
 import SideBarItem from "./SideBarItem";
 import Loader from "../Loader/Loader";
-import Error from "@/app/error"
+import Error from "@/app/error";
 
-
-interface SidebarProps{
-  showToggleMenu ?: boolean
+interface SidebarProps {
+  showToggleMenu?: boolean;
 }
 
-const Sidebar : React.FC<SidebarProps> = ({showToggleMenu = false}) => {
+const Sidebar: React.FC<SidebarProps> = ({ showToggleMenu = false }) => {
+  const { data, error } = useSWR(`/api/categories`);
 
-      const { data, error } = useSWR(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products/categories`);
+  if (error) {
+    return <Error />;
+  }
 
-
-      // if (error) {
-      //   return (
-      //       <Error/>
-      //   );
-      // }
-
-      // if (!data) {
-      //   return (
-      //   <Loader/>
-      //   );
-      // }
-
-
-      console.log(data,"fkdsjkds")
-      
-
+  if (!data) {
+    return <Loader />;
+  }
 
   return (
     <div
@@ -57,150 +45,21 @@ const Sidebar : React.FC<SidebarProps> = ({showToggleMenu = false}) => {
   border-gray-200
     shadow-md
 
-    ${ showToggleMenu ? "block" : "hidden" }
+    ${showToggleMenu ? "block" : "hidden"}
 
      `}
     >
-        {
-            [
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data last ",
-            ].map((category:string,index:number)=>
-                
-          
-            [
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data",
-              "data last ",
-            ].length == (index + 1) ?
-          (
-            <div key={index} className="mb-32" >
-              <SideBarItem category={category} key={index} />
-            </div>
-          )
-          :
+      {data.map((category: string, index: number) =>
+        data.length == index + 1 ? (
+          <div key={index} className="mb-32">
+            <SideBarItem category={category} key={index} />
+          </div>
+        ) : (
           <SideBarItem category={category} key={index} />
-                
-                )
-        }
-
+        )
+      )}
     </div>
   );
-}
+};
 
-
-
-export default  Sidebar ;
+export default Sidebar;
