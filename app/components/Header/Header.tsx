@@ -1,3 +1,4 @@
+import MobileMenu from "./MobileMenu";
 import SearchBox from "./SearchBox";
 
 export default function Header() {
@@ -7,8 +8,10 @@ export default function Header() {
    <span className=" hidden sm:block  text-gray-600 font-extrabold" >
     Store App
    </span>
+    
 
-  
+   <MobileMenu/>
+
    <SearchBox />
 
    </nav>

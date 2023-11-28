@@ -1,7 +1,7 @@
 export default function Loader() {
 	return (
-		<div className="text-center" aria-busy="true" role="status">
-			<div>
+		<div className="text-center min-h-screen w-full  " aria-busy="true" role="status">
+			<div className="flex items-center justify-center h-full" >
 				<svg
 					aria-hidden="true"
 					className="mr-2 inline h-12 w-12 animate-spin fill-neutral-600 text-neutral-200 dark:text-neutral-600"

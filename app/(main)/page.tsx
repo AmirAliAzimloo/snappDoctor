@@ -6,7 +6,7 @@ export default function Home() {
     <div
    className='
    w-full
-   pl-28
+   
    sm:pl-52
    md:pl-64
    lg:pl-80

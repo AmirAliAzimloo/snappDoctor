@@ -17,7 +17,7 @@ const SideBarItem:React.FC<SideBarItemProps> =({category}) =>{
     pl-1
     sm:pl-8
     space-x-4
-    text-gray-400
+    text-gray-200
 
     py-4
     border-b-2
@@ -38,7 +38,7 @@ const SideBarItem:React.FC<SideBarItemProps> =({category}) =>{
        {category}
       </span>
 
-      <div className=" hidden sm:block  ">
+      <div className=" block  ">
         <HiArrowSmRight />
       </div>
     </div>

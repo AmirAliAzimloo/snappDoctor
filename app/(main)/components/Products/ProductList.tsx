@@ -11,17 +11,17 @@ const ProductList = () => {
 
 
     
-    if (error) {
-        return (
-            <Error/>
-        );
-      }
+    // if (error) {
+    //     return (
+    //         <Error/>
+    //     );
+    //   }
 
-      if (!data) {
-        return (
-        <Loader/>
-        );
-      }
+    //   if (!data) {
+    //     return (
+    //     <Loader/>
+    //     );
+    //   }
 
     return ( 
         // <div>

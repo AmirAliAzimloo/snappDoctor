@@ -5,22 +5,27 @@ import SideBarItem from "./SideBarItem";
 import Loader from "../Loader/Loader";
 import Error from "@/app/error"
 
-export default function Sidebar() {
+
+interface SidebarProps{
+  showToggleMenu ?: boolean
+}
+
+const Sidebar : React.FC<SidebarProps> = ({showToggleMenu = false}) => {
 
       const { data, error } = useSWR(`${process.env.NEXT_PUBLIC_BACKEND_URL}/products/categories`);
 
 
-      if (error) {
-        return (
-            <Error/>
-        );
-      }
+      // if (error) {
+      //   return (
+      //       <Error/>
+      //   );
+      // }
 
-      if (!data) {
-        return (
-        <Loader/>
-        );
-      }
+      // if (!data) {
+      //   return (
+      //   <Loader/>
+      //   );
+      // }
 
 
       console.log(data,"fkdsjkds")
@@ -29,17 +34,16 @@ export default function Sidebar() {
 
   return (
     <div
-      className="
-      w-24
+      className={`
+      w-full h-screen  overflow-hidden 
+      sm:block
    sm:w-52
    md:w-60
    lg:w-80
-    
      fixed 
-
+    bg-gray-400
      top-[70px]
 
-     h-screen  
      transition-all
      duration-75 
      overflow-x-hidden
@@ -50,15 +54,145 @@ export default function Sidebar() {
   
     
     border-r-2
-    border-gray-200
+  border-gray-200
     shadow-md
 
-     "
+    ${ showToggleMenu ? "block" : "hidden" }
+
+     `}
     >
         {
-            data.map((category:string,index:number)=>
+            [
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data last ",
+            ].map((category:string,index:number)=>
                 
-        <SideBarItem category={category} key={index} />
+          
+            [
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data",
+              "data last ",
+            ].length == (index + 1) ?
+          (
+            <div key={index} className="mb-32" >
+              <SideBarItem category={category} key={index} />
+            </div>
+          )
+          :
+          <SideBarItem category={category} key={index} />
                 
                 )
         }
@@ -66,3 +200,7 @@ export default function Sidebar() {
     </div>
   );
 }
+
+
+
+export default  Sidebar ;
