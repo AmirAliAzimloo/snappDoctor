@@ -1,36 +1,24 @@
-import { ProductType } from "@/types/products";
-import Image from "next/image";
-import React, { FC } from "react";
-
-type IProps = Partial<ProductType>;
-
-const ProductCard: FC<IProps> = ({
-  id,
-  image,
-  category,
-  title,
-  description,
-  price,
-}) => {
-  return (
-    <>
-      <div className="w-full bg-[#f2f2f2] ease-out shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
+const ProductCard = () => {
+    return ( 
+        <div className="w-full bg-[#f2f2f2] ease-out shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
+            
           <img
-            src={image}
+            src={"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"}
             alt="Product"
             className="h-80 w-full object-contain rounded-t-xl bg-white"
           />
+          
           <div className="px-4 py-3 w-full">
             <p className="text-lg font-bold text-black truncate block capitalize">
-              {title}
+              title
             </p>
             <span className="text-gray-400 mr-3 uppercase text-xs">
-              {category}
+              category
             </span>
             <div className="flex items-center">
               <p className="text-lg font-semibold text-black cursor-auto my-3">
-                ${price}
+                $price
               </p>
               <del>
                 <p className="text-sm text-gray-600 cursor-auto ml-2">$199</p>
@@ -55,8 +43,7 @@ const ProductCard: FC<IProps> = ({
           </div>
         </a>
       </div>
-    </>
-  );
-};
-
+     );
+}
+ 
 export default ProductCard;

@@ -1,10 +1,7 @@
-import React, { FC, useEffect, useState } from "react";
-import SearchField from "../Shared/Fields/SearchField";
-interface HeaderProps {
-  searchFunc?: (e: string) => void;
-}
+import Searchbar from "../Searchbar";
 
-const Header: React.FC<HeaderProps> = ({ searchFunc }) => {
+
+const Header: React.FC = () => {
   return (
     <>
       <header
@@ -15,7 +12,7 @@ const Header: React.FC<HeaderProps> = ({ searchFunc }) => {
         <nav className="flex justify-between items-center container" >
           <span className="">Store App</span>
           <div className="md:min-w-[300px]">
-            <SearchField />
+            <Searchbar />
           </div>
         </nav>
       </header>
