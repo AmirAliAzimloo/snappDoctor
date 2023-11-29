@@ -25,11 +25,29 @@ const ProductList = () => {
       }
 
     return ( 
-        <section className=" my-4 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 " >
+      <>
+        <section className=" my-4 grid  grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3  " >
           {
-            data.map((product:ProductType,index:number)=><Product product={product} key={index}  />)
+            data.slice(0,10).map((product:ProductType,index:number)=><Product product={product} key={index}  />)
           }
         </section>
+
+<ul >
+{
+Array.from({ length: Math.ceil(data.length / 10) }).map(
+  (_, index) => (
+    <li
+      key={index + 1}
+    >
+      <a href="#" className="">
+        {index + 1}
+      </a>
+    </li>
+  )
+)}
+</ul>
+
+</>
      );
 }
  
