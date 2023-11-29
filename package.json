@@ -1,33 +1,31 @@
 {
-  "name": "messenger-next14",
+  "name": "shop_sample",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port 4001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/node": "20.10.0",
+    "@types/react": "18.2.39",
+    "@types/react-dom": "18.2.17",
     "animate.css": "^4.1.1",
+    "autoprefixer": "10.4.16",
     "axios": "^1.6.2",
     "clsx": "^2.0.0",
-    "next": "14.0.2",
-    "react": "^18",
-    "react-dom": "^18",
+    "eslint": "8.54.0",
+    "eslint-config-next": "14.0.3",
+    "next": "14.0.3",
+    "postcss": "8.4.31",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-icons": "^4.12.0",
     "swr": "^2.2.4",
-    "tailwind-scrollbar": "^3.0.5"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.2",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "tailwind-scrollbar": "^3.0.5",
+    "tailwindcss": "3.3.5",
+    "typescript": "5.3.2"
   }
 }
