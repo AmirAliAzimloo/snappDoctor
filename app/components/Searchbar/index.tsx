@@ -1,14 +1,16 @@
 "use client"
 
-// import axios from "@/app/libs/axios";
-import axios from "axios";
+import axios from "@/app/libs/axios";
+// import axios from "axios";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BsSearch } from "react-icons/bs";
 
 const Searchbar = () => {
   
   const [search,setSearch] = useState("")
+  const router = useRouter();
 
 
   
@@ -33,6 +35,11 @@ const Searchbar = () => {
     placeholder="Search ..."
     value={search}
     onChange={e=>setSearch(e.target.value)}
+    onKeyDown={(e)=>{
+      if(e.key === 'Enter' && !!search.trim()) {
+        router.push(`/search/${search}`)        
+    }
+    }}
     />
     <Link href={`/search/${search}`} className="
     absolute

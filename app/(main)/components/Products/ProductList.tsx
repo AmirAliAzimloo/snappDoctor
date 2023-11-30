@@ -39,7 +39,7 @@ if(data){
   return ( 
         
     <section className="w-full md:w-3/4 bg-white rounded-lg shadow-lg p-5">
-    <div className="flex justify-start flex-wrap items-center -m-4">
+    <div className="flex justify-center flex-wrap items-center -m-4">
       {
         data.products.map((product:ProductType,index:number) => (
           <div className="p-4 w-full sm:w-1/2 lg:w-1/3 h-auto " key={index}>

@@ -14,7 +14,7 @@ const ProductCard : React.FC<ProductCardProps> = ({data}) => {
         <a href="#">
             
           <Image
-            src={"/5.jpg"}
+            src={data.image}
             alt="Product"
             width="700"
             height="700"
@@ -33,7 +33,7 @@ const ProductCard : React.FC<ProductCardProps> = ({data}) => {
                 ${data.price}
               </p>
               <del>
-                <p className="text-sm text-gray-600 cursor-auto ml-2">$199</p>
+                <p className="text-sm text-gray-600 cursor-auto ml-2">${data.discount}</p>
               </del>
               <div className="ml-auto">
                 <svg

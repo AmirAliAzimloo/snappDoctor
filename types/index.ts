@@ -5,7 +5,7 @@ export type ProductType = {
         price: number,
         category: string,
         image: string,
-        rating: object,
+        discount: number,
 }
 
 export type CategorysType = string[]
