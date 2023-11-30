@@ -1,8 +1,17 @@
+"use client"
 
-
+// import axios from "@/app/libs/axios";
+import axios from "axios";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 import { BsSearch } from "react-icons/bs";
 
 const Searchbar = () => {
+  
+  const [search,setSearch] = useState("")
+
+
+  
   return (
    <div className=" w-full  sm:max-w-sm flex justify-center items-center relative shadow-md " >
     
@@ -22,14 +31,30 @@ const Searchbar = () => {
     text-gray-500
     "
     placeholder="Search ..."
+    value={search}
+    onChange={e=>setSearch(e.target.value)}
     />
-    <div className="
+    <Link href={`/search/${search}`} className="
     absolute
     text-gray-600
     right-2
     " >
-    <BsSearch  size={"20"}/>
-    </div>
+      <div
+      onClick={()=>setSearch("")}
+      >
+
+    <BsSearch 
+    
+    className={`
+    cursor-pointer
+    ${
+      search.trim().length ? "text-sky-600 font-extrabold block" : "text-gray-500 disabled"
+    }
+    `}
+
+    size={"20"}/>
+      </div>
+    </Link >
 
    </div>
   )

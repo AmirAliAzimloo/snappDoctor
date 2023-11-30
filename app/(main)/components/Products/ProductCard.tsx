@@ -1,24 +1,36 @@
-const ProductCard = () => {
+import { ProductType } from "@/types";
+import Image from "next/image";
+
+
+interface ProductCardProps{
+  data:ProductType
+}
+
+
+const ProductCard : React.FC<ProductCardProps> = ({data}) => {
+
     return ( 
         <div className="w-full bg-[#f2f2f2] ease-out shadow-md rounded-xl duration-500 hover:scale-105 hover:shadow-xl">
         <a href="#">
             
-          <img
-            src={"https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg"}
+          <Image
+            src={"/5.jpg"}
             alt="Product"
-            className="h-80 w-full object-contain rounded-t-xl bg-white"
+            width="700"
+            height="700"
+            className=" object-contain rounded-t-xl bg-white"
           />
           
           <div className="px-4 py-3 w-full">
             <p className="text-lg font-bold text-black truncate block capitalize">
-              title
+              {data.title}
             </p>
             <span className="text-gray-400 mr-3 uppercase text-xs">
-              category
+              {data.category}
             </span>
             <div className="flex items-center">
               <p className="text-lg font-semibold text-black cursor-auto my-3">
-                $price
+                ${data.price}
               </p>
               <del>
                 <p className="text-sm text-gray-600 cursor-auto ml-2">$199</p>
