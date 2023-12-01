@@ -27,8 +27,8 @@ const ProductList: React.FC<ProductListProps> = ({
 
   if (!data) {
     return (
-      <div className="w-full" data-testid="loader" >
-        <Loader   isLoading={true} />;
+      <div className="w-full flex" data-testid="loader" >
+        <Loader   isLoading={true} />
       </div>
     ) 
     
@@ -42,7 +42,17 @@ const ProductList: React.FC<ProductListProps> = ({
     );
   }
 
-  if (data) {
+  if(data?.products?.length == 0){
+    return(
+      <div className="w-full flex justify-center flex-wrap items-center h-screen md:w-3/4 bg-white rounded-lg shadow-lg p-5" >
+        <div className="-m-4 text-sky-500 text-2xl font-extrabold " >
+        not found your product ...
+        </div>
+      </div>
+    )
+  }
+
+  if (data?.products?.length > 0) {
     return (
       <section className="w-full md:w-3/4 bg-white rounded-lg shadow-lg p-5">
         <div data-testid="product-list" className="flex justify-center flex-wrap items-center -m-4">

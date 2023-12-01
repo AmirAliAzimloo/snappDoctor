@@ -62,7 +62,6 @@ export async function GET(request: Request, { params }: { params: IParams }) {
      });
     }
   } catch (error: any) {
-    // console.log(error, "ERROR_MESSAGES_CATEGORIES");
     return new NextResponse("InteranlError", { status: 500 });
   }
 }

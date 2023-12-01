@@ -13,6 +13,8 @@ const Searchbar = () => {
   const router = useRouter();
 
 
+
+
   
   return (
    <div className=" w-full  sm:max-w-sm flex justify-center items-center relative shadow-md " >
@@ -38,6 +40,7 @@ const Searchbar = () => {
     onKeyDown={(e)=>{
       if(e.key === 'Enter' && !!search.trim()) {
         router.push(`/search/${search}`)        
+        setSearch("")
     }
     }}
     />

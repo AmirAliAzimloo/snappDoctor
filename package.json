@@ -12,8 +12,6 @@
   "dependencies": {
     "animate.css": "^4.1.1",
     "axios": "^1.6.2",
-    "clsx": "^2.0.0",
-    "msw": "^2.0.9",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",

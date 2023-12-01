@@ -89,6 +89,21 @@ describe('ProductList',  () => {
     expect(screen.queryByTestId('product-list')).not.toBeInTheDocument();
   });
 
+  it('renders "not found your product ..." message when data.products is empty', () => {
+
+    (swrModule as any).default.mockReturnValue({
+      data: { products: [] },
+      error: undefined,
+      isValidating: false,
+    });
+
+    render(<ProductList />);
+
+    const notFoundMessage = screen.getByText('not found your product ...');
+    expect(notFoundMessage).toBeInTheDocument();
+  });
+
+
   it('renders product list', () => {
     (swrModule as any).default.mockReturnValue({
       data: mockData,

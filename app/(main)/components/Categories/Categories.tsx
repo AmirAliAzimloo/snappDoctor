@@ -14,7 +14,9 @@ const Categories = () => {
   const [filterskind,setFiltersKind] = useState<string>("")
 
   if (isLoading) {
-    return <Loader isLoading={true} />;
+    return (
+        <Loader isLoading={true} />
+    );
   }
 
   if (error) {
