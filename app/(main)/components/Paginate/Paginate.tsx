@@ -15,6 +15,7 @@ const Paginate: React.FC<PaginateProps> = ({
       <ul className="flex items-center justify-center my-4 space-x-2 ">
         {Array.from({ length: Math.ceil(total / 10) }).map((_, index) => (
           <li
+          data-testid="paginate"
             className={`
           bg-gray-200
           cursor-pointer

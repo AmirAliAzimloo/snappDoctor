@@ -2,14 +2,12 @@
  * @jest-environment jsdom
  */
 
-// Import necessary testing utilities
 import React from "react";
 import { render} from "@testing-library/react";
-import ProductCard from '@/app/(main)/components/Products/ProductCard'; // Update the path accordingly
+import ProductCard from '@/app/(main)/components/Products/ProductCard'; 
 import { ProductType } from '@/types';
 
 
-// Mock the next/image component to avoid errors during testing
 jest.mock('next/image', () => ({ src, alt }: { src: string; alt: string }) => (
     <img src={src} alt={alt} />
   ));

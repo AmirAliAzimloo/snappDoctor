@@ -11,7 +11,7 @@ import Paginate from "@/app/(main)/components/Paginate/Paginate";
 describe("Paginate", () => {
     const mockSetPageIndex = jest.fn();
   
-    const renderComponent = (props = {}) => {
+    const renderComponent = (props = {}) => { 
       return render(
         <Paginate
           total={20}
@@ -25,7 +25,6 @@ describe("Paginate", () => {
     it("renders page numbers correctly", () => {
       renderComponent();
   
-      // Assuming each page shows 10 items
       const pageNumbers = screen.getAllByRole("listitem");
       expect(pageNumbers).toHaveLength(2);
   

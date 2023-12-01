@@ -8,7 +8,7 @@ interface LoadingProps{
 const Loader:React.FC<LoadingProps> = ({isLoading,color = "#36d7b7"}) => {
     return ( 
       <div  className="h-screen w-full flex items-center justify-center " >
-        <PulseLoader   loading={isLoading} color={color} size={6} />
+        <PulseLoader  className="PulseLoader"  loading={isLoading} color={color} size={6} />
       </div>
      );
 }

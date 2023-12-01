@@ -25,10 +25,10 @@ const ProductList: React.FC<ProductListProps> = ({
     }?page=${pageIndex}`
   );
 
-  if (isLoading) {
+  if (!data) {
     return (
       <div className="w-full" data-testid="loader" >
-        <Loader  isLoading={true} />;
+        <Loader   isLoading={true} />;
       </div>
     ) 
     
@@ -45,9 +45,9 @@ const ProductList: React.FC<ProductListProps> = ({
   if (data) {
     return (
       <section className="w-full md:w-3/4 bg-white rounded-lg shadow-lg p-5">
-        <div className="flex justify-center flex-wrap items-center -m-4">
+        <div data-testid="product-list" className="flex justify-center flex-wrap items-center -m-4">
           {data.products.map((product: ProductType, index: number) => (
-            <div className="p-4 w-full sm:w-1/2 lg:w-1/3 h-auto " key={index}>
+            <div data-testid="product-card" className="p-4 w-full sm:w-1/2 lg:w-1/3 h-auto " key={index}>
               <ProductCard data={product} />
             </div>
           ))}
