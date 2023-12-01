@@ -88,7 +88,7 @@ const Categories = () => {
           <div className="flex-1 overflow-x-scroll w-full">
             <div className="w-fit flex justify-start items-center gap-3">
                 <div
-                 className="   bg-neutral-100 rounded-lg  shadow-sm  animate-pulse py-1 px-4    "
+                 className="   bg-neutral-200 rounded-lg  shadow-sm  animate-pulse py-1 px-4    "
                  onClick={()=>setFiltersKind("categories")}
                 >
                 Categories
