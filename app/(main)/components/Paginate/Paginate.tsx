@@ -1,21 +1,21 @@
-"use client"
-
-import { ProductType } from "@/types";
-
+"use client";
 interface PaginateProps {
-total: number;
-  pageIndex:number;
-  setPageIndex:(value: number)=>void;
+  total: number;
+  pageIndex: number;
+  setPageIndex: (value: number) => void;
 }
 
-const Paginate: React.FC<PaginateProps> = ({ total , setPageIndex , pageIndex }) => {
+const Paginate: React.FC<PaginateProps> = ({
+  total,
+  setPageIndex,
+  pageIndex,
+}) => {
   return (
     <>
-      <ul className="flex items-center justify-center my-4 space-x-2 " >
+      <ul className="flex items-center justify-center my-4 space-x-2 ">
         {Array.from({ length: Math.ceil(total / 10) }).map((_, index) => (
           <li
-          className={`
-          
+            className={`
           bg-gray-200
           cursor-pointer
           py-2
@@ -26,14 +26,13 @@ const Paginate: React.FC<PaginateProps> = ({ total , setPageIndex , pageIndex })
           hover:bg-gray-600
           transition-all
           duration-150
-          ${
-            pageIndex == (index + 1) ? "text-gray-200 bg-gray-600" : ""
-          }
+          ${pageIndex == index + 1 ? "text-gray-200 bg-gray-600" : ""}
           `}
-          onClick={()=>setPageIndex(index + 1)} 
-          key={index + 1}>
-                {index + 1}
-            </li>
+            onClick={() => setPageIndex(index + 1)}
+            key={index + 1}
+          >
+            {index + 1}
+          </li>
         ))}
       </ul>
     </>
